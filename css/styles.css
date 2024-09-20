@@ -1,0 +1,561 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Animacion */
+@keyframes aparecer {
+    from { 
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer-impar {
+    from { 
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to { 
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer-texto {
+    from{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes aparecer-div {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+
+/* Mobile */
+
+.header{
+    background-color:#017c53;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    min-height: 5rem;;
+}
+
+.header_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    margin: 1em;
+}
+
+#hamburguer{
+    font-size: 2em;
+}
+
+/* Logo */
+
+.header_nav a{
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.header_nav a img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Menú hamburguesa */
+
+.menu{
+    /* display: inline-block; */
+    list-style-type: none;
+    width: 100%;
+}
+
+.menu li{
+    width: 100%;
+    display: block;
+}
+
+.menu li a{
+    color: inherit;
+    width: 100%;
+    height: auto;
+    display: block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.menu li a:hover{
+    background-color:#006241;
+}
+
+.activate{
+    display: inline-block;
+}
+
+.desactive{
+    display: none;
+}
+
+/* Main Container */
+
+.container_main{
+    background-image: url(../images/starbucks-local.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container_background{
+    background-color: rgba(8, 7, 7, 0.574);
+    background-size: cover;
+    z-index: 1;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container_background h1{
+    z-index: 2;
+    color: white;
+    font-size: 3em;
+    margin-bottom: 2em;
+}
+
+.container_background h2{
+    color: white;
+}
+
+.starbucks-btn {
+    margin-top: 1em;
+    background-color: #006241; 
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 24px;
+    font-size: 1.5em;
+    font-family: 'Arial', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.starbucks-btn:hover {
+    background-color: #007b4a; 
+    transform: scale(1.05);
+}
+
+/* Footer */
+
+.container_footer{
+    background-color: #002c1d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+}
+
+.container_sitio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_sitio ul{
+    list-style-type: none;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.container_sitio ul li{
+    margin-bottom: 0.5em;
+}
+
+.container_sitio ul li a{
+    color: white;
+    font-size: 1em;
+}
+
+.container_redes{
+    display: flex;
+    flex-direction: column;
+}
+
+.container_redes h4{
+    color: white;
+    margin-bottom: 1em;
+}
+
+.container_redes .redes_sociales{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.container_redes .redes_sociales a{
+    color: white;
+}
+
+.container_redes .redes_sociales a:hover{
+    color: #006241;
+
+}
+
+/* Nuestros productos */
+
+.main_products{
+    display: flex;
+    flex-direction: column;
+    padding-top: 5rem;
+    text-align: justify;
+}
+
+.main_products h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.main_products h3{
+    margin-bottom: 1em;
+}
+
+.main_products p{
+    margin-bottom: 1em;
+}
+
+.container_div{
+    display: flex;
+    flex-direction: column;
+    background-color: #f5eee1;
+    padding: 2em;
+    min-height: 30rem;
+}
+
+.container_div img{
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.container_text{
+    animation: aparecer-texto 3s forwards;
+}
+
+.par img{
+    animation: aparecer 3s forwards;
+}
+
+
+.impar{
+    background-color: white;
+}
+
+.impar img{
+    animation: aparecer-impar 3s forwards;
+}
+
+/* Nosotros */
+
+.main_nosotros{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 7rem;
+    text-align: justify;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.main_nosotros h1{
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+.container_about{
+    display: flex;
+    flex-direction: column;
+    background-color: #a46424;
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 15rem;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.container_about:hover{
+    box-shadow: 0 10px 8px rgba(0, 0, 0, 0.364)
+}
+
+.container_green{
+    background-color: #006241;
+}
+
+.container_about img{
+    margin-bottom: 1rem;
+    height: 30%;
+    object-fit: cover;
+}
+
+.container_about_text{
+    color: white;
+}
+
+/* Contacto */
+
+.main_contacto{
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_contacto_map{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: #f5eee1;
+}
+
+.main_contacto_map_text{
+    color: #a46424;
+    width: 100%;
+}
+
+.main_contacto_map_text p{
+    margin-bottom: 1rem;
+    margin-top:1rem;
+}
+
+.main_contacto_map_text a{
+    color: inherit;
+    margin-bottom: 2rem;
+}
+
+
+.main_contacto_map_text a:hover{
+    color: #006241;
+}
+
+.map{
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 20rem;
+}
+
+.main_contacto_form{
+    min-height: 30rem;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main_contacto_form form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: #00704a;
+    border-radius: 5px;
+    padding: 1rem;
+    color: white;
+    margin-top: 1rem;
+}
+
+.main_contacto_form label{
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.main_contacto_form input{
+    padding: 0.5rem;
+}
+
+.main_contacto_form .btn_enviar{
+    color: white;
+    margin-top: 0.5rem;
+    background-color: #179a6e;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.main_contacto_form .btn_enviar:hover{
+    background-color: #006241;
+}
+
+textarea{
+    min-height: 10rem;
+    resize: none;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .container_div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 5px;
+        height: 30rem
+    }
+
+    .impar{
+        flex-direction: row-reverse;
+    }
+
+    .container_div img{
+        max-width: 40%;
+        margin-bottom: 0;
+        height: 100%;
+        object-fit: cover; 
+    }
+
+    .container_text{
+        margin-left: 1em;
+        margin-right: 1em;
+        flex-grow: 1;
+    }
+    /* Contacto */
+    .main_contacto_map{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main_contacto_map_text{
+        width: 30%;
+    }
+
+    .map{
+        width: 50%;
+        margin: 0;
+        margin-left: 1rem;
+    }
+}
+
+/* PC */
+
+@media (min-width: 1281px) {
+    .header{
+        background-color: transparent;
+        transition: all 0.5s ease-out;
+    }
+
+    .header_activate{
+        background-color:#017c53;
+        transition: all 0.5s ease-out;
+    }
+
+    .header_new{
+        background-color: white;
+        color: #006241;
+        transition: all 0.5s ease-out;
+    }
+    /* Desaparece el menú hamburguesa */
+    #hamburguer{
+        display: none;
+    }
+    /* Logo */
+
+    .header_nav a{
+        width: 5%;
+        margin: 0;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .header_nav{
+        padding: 0em;
+    }
+    .menu li{
+        margin: 0.5em;
+        position: relative;
+    }
+    .menu li a:hover{
+        background-color:transparent;
+    }
+    
+    .menu li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 5px;
+        background-color: #00704a; /* Color del subrayado */
+        transform: scaleX(0); /* Inicia el subrayado invisible */
+        transform-origin: right; /* Comienza la animación desde la derecha */
+        transition: transform 0.3s ease-out; /* Transición suave */
+    }
+    
+    .menu li:hover::after {
+        transform: scaleX(1); /* Al pasar el mouse, el subrayado crece a lo largo del texto */
+        transform-origin: left; /* Hace que la animación comience desde la izquierda */
+    }
+    
+
+    /* Footer */
+    .container_footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+
+    .container_sitio ul{
+        text-align: start;
+    }
+}

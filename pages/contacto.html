@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/2414960776.js" crossorigin="anonymous"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+    <!-- Favicon -->
+    <link rel="icon" href="/images/starbucks-logo-png-transparent.png" type="image/x-icon">
+    <title>Nuestros productos</title>
+</head>
+<body>
+    <header class="header header_activate">
+        <div class="header_nav">
+            <a href="../index.html"><img src="/images/starbucks-logo-png-transparent.png" alt="logo"></a>
+            <i class="fas fa-bars" id="hamburguer"></i>
+        </div>
+        <ul id="menu" class="menu desactive">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="./nuestrosProductos.html">Nuestros productos</a></li>
+            <li><a href="./nosotros.html">Nosotros</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+        </ul>
+    </header>
+    <main class="main_contacto">
+        <div class="main_contacto_map">
+            <div class="main_contacto_map_text">
+                <h2>Sucursales</h2>
+                <p>Capital Federal</p>
+                <a href="#"><i class="fa-brands fa-whatsapp whatsapp"></i> +11 2223333</a>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d26276.867708833008!2d-58.38540991315696!3d-34.588772378093076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sStarbucks!5e0!3m2!1ses!2sar!4v1726665567922!5m2!1ses!2sar" class="map" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="main_contacto_form">
+            <h2>Formulario</h2>
+            <form action="" id="formulario">
+                <label for="name">Nombre</label>
+                <input type="text" name="name" required>
+                <label for="email">Correo</label>
+                <input type="email" name="email" required>
+                <label for="textarea">Escriba su consulta (Máx 200 carácteres)</label>
+                <textarea name="message" id="textarea" maxlength="200" required></textarea>
+                <input id="btn_enviar" class="btn_enviar" type="submit" value="Enviar">
+            </form>
+        </div>
+    </main>
+    <footer class="container_footer">
+        <div class="container_sitio">
+            <div class="container_links">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./nuestrosProductos.html">Nuestros productos</a></li>
+                    <li><a href="./nosotros.html">Nosotros</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container_redes">
+            <h4>Nuestras redes</h4>
+            <div class="redes_sociales">
+                <a href="https://x.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="/js/index.js"></script>
+    
+</body>
+</html>
