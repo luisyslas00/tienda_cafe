@@ -54,8 +54,6 @@ containers.forEach(container => {
     observer.observe(container);
 });
 
-emailjs.init('oHi7bLqPRdVIHMasy')
-
 if(document.getElementById('formulario')){
     const formulario = document.getElementById('formulario')
     const btn = document.getElementById('btn_enviar');
